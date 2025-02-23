@@ -1,0 +1,30 @@
+.download-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.download-link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-link {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.copy-download-link {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #0073aa;
+    color: white;
+    border: none;
+}
+
+.copy-download-link:hover {
+    background: #005177;
+}
