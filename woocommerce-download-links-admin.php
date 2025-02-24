@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WooCommerce Download Links Admin
-Plugin URI: https://github.com/yourusername/woocommerce-download-links-admin
+Plugin URI: https://github.com/ahmadesmaeeli81/woocommerce-download-links-admin
 Description: Displays downloadable product links in WooCommerce admin, includes copy button and filter for products without download links.
 Version: 1.5
 Author: Ahmad Esmaeeli
