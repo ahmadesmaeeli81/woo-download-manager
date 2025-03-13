@@ -35,4 +35,4 @@ This plugin is released under the **GPL-2.0** license, ensuring freedom to use, 
 - [Website](https://ahmadesmaeeli.ir)
 
 ## 💬 Support
-For support, please visit the [GitHub repository](https://github.com/ahmadesmaeeli81/woocommerce-download-links-admin) or contact the author via [email](mailto:your-email@example.com).
+For support, please visit the [GitHub repository](https://github.com/ahmadesmaeeli81/woocommerce-download-links-admin) or contact the author via [email](mailto:esmaeeli.ahmad81@gmail.com).
