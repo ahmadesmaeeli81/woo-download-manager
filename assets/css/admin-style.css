@@ -1,30 +1,61 @@
 .download-links-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .download-link-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.file-name {
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #23282d;
 }
 
 .download-link {
-    width: 80%;
+    flex: 1;
+    min-width: 200px;
+    margin-right: 5px;
     padding: 5px;
-    border: 1px solid #ccc;
-    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
 }
 
 .copy-download-link {
-    padding: 5px 10px;
-    cursor: pointer;
-    background: #0073aa;
-    color: white;
-    border: none;
+    margin-right: 5px !important;
+    background-color: #f7f7f7 !important;
+}
+
+.view-link {
+    background-color: #e7f5ff !important;
 }
 
 .copy-download-link:hover {
-    background: #005177;
+    background-color: #f0f0f0 !important;
+}
+
+.view-link:hover {
+    background-color: #d7ebff !important;
+}
+
+/* Success message after copying */
+.copy-success {
+    color: green;
+    margin-left: 5px;
+    font-style: italic;
+    animation: fadeOut 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }

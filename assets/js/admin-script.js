@@ -1,17 +1,36 @@
-jQuery(document).ready(function ($) {
-    $(document).on("click", ".copy-download-link", function (e) {
-        e.preventDefault(); // 🔹 Prevent default button behavior (avoid page refresh)
-
-        var linkField = $(this).siblings(".download-link");
-        linkField.select();
+jQuery(document).ready(function($) {
+    // Copy download link functionality
+    $('.copy-download-link').on('click', function() {
+        var $button = $(this);
+        var $input = $button.prev('.download-link');
         
-        navigator.clipboard.writeText(linkField.val()).then(() => {
-            $(this).after("<span class='copy-success'>Copied!</span>");
-            setTimeout(() => {
-                $(".copy-success").fadeOut(500, function () {
-                    $(this).remove();
-                });
-            }, 1500);
-        }).catch(err => console.error("Copy failed: ", err));
+        // Select the text
+        $input.select();
+        
+        try {
+            // Copy the text
+            document.execCommand('copy');
+            
+            // Show success message
+            var $success = $('<span class="copy-success">Copied!</span>');
+            $button.after($success);
+            
+            // Remove success message after animation completes
+            setTimeout(function() {
+                $success.remove();
+            }, 3000);
+        } catch (err) {
+            console.error('Unable to copy: ', err);
+        }
+        
+        // Deselect the text
+        $input.blur();
+        
+        return false;
+    });
+    
+    // Make the entire input field selectable with one click
+    $('.download-link').on('click', function() {
+        $(this).select();
     });
 });
