@@ -45,7 +45,7 @@ add_action('manage_product_posts_custom_column', function ($column, $post_id) {
 add_action('restrict_manage_posts', function () {
     global $typenow;
     if ($typenow === 'product') {
-        $selected = isset($_GET['download_status']) ? $_GET['download_status'] : '';
+        $selected = isset($_GET['download_status']) ? sanitize_text_field($_GET['download_status']) : '';
         echo '<select name="download_status">
                 <option value="">' . __('All Products', 'woo-download-manager') . '</option>
                 <option value="has_download" ' . selected($selected, 'has_download', false) . '>' . __('Has Download Links', 'woo-download-manager') . '</option>
@@ -58,7 +58,8 @@ add_action('restrict_manage_posts', function () {
 add_action('pre_get_posts', function ($query) {
     global $pagenow, $typenow;
     if ($pagenow === 'edit.php' && $typenow === 'product' && isset($_GET['download_status'])) {
-        if ($_GET['download_status'] === 'no_download') {
+        $download_status = sanitize_text_field($_GET['download_status']);
+        if ($download_status === 'no_download') {
             $meta_query = [
                 [
                     'key'     => '_downloadable_files',
@@ -66,7 +67,7 @@ add_action('pre_get_posts', function ($query) {
                 ],
             ];
             $query->set('meta_query', $meta_query);
-        } elseif ($_GET['download_status'] === 'has_download') {
+        } elseif ($download_status === 'has_download') {
             $meta_query = [
                 [
                     'key'     => '_downloadable_files',
