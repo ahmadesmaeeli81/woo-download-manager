@@ -2,7 +2,7 @@
 
 // Add new column in WooCommerce admin product list
 add_filter('manage_edit-product_columns', function ($columns) {
-    $columns['download_link'] = 'Download Links';
+    $columns['download_link'] = __('Download Links', 'woo-download-manager');
     return $columns;
 });
 
@@ -15,6 +15,11 @@ add_filter('manage_edit-product_sortable_columns', function ($columns) {
 // Display download links in the new column
 add_action('manage_product_posts_custom_column', function ($column, $post_id) {
     if ($column === 'download_link') {
+        // Check user capabilities
+        if (!current_user_can('manage_woocommerce')) {
+            return;
+        }
+
         $downloads = get_post_meta($post_id, '_downloadable_files', true);
         if (!empty($downloads) && is_array($downloads)) {
             echo '<div class="download-links-container">';
@@ -23,15 +28,15 @@ add_action('manage_product_posts_custom_column', function ($column, $post_id) {
                 $file_name = !empty($file['name']) ? esc_html($file['name']) : basename($download_url);
                 
                 echo '<div class="download-link-item">';
-                echo '<span class="file-name">' . $file_name . '</span>';
+                echo '<span class="file-name" title="' . esc_attr($file_name) . '">' . $file_name . '</span>';
                 echo '<input type="text" class="download-link" value="' . $download_url . '" readonly />';
-                echo '<button class="copy-download-link button">Copy</button>';
-                echo '<a href="' . $download_url . '" class="button view-link" target="_blank" title="Open in new tab">View</a>';
+                echo '<button class="copy-download-link button" title="' . esc_attr__('Copy download link', 'woo-download-manager') . '">' . __('Copy', 'woo-download-manager') . '</button>';
+                echo '<a href="' . $download_url . '" class="button view-link" target="_blank" title="' . esc_attr__('Open in new tab', 'woo-download-manager') . '">' . __('View', 'woo-download-manager') . '</a>';
                 echo '</div>';
             }
             echo '</div>';
         } else {
-            echo '<em>No Download Links</em>';
+            echo '<em>' . __('No Download Links', 'woo-download-manager') . '</em>';
         }
     }
 }, 10, 2);
@@ -42,9 +47,9 @@ add_action('restrict_manage_posts', function () {
     if ($typenow === 'product') {
         $selected = isset($_GET['download_status']) ? $_GET['download_status'] : '';
         echo '<select name="download_status">
-                <option value="">All Products</option>
-                <option value="has_download" ' . selected($selected, 'has_download', false) . '>Has Download Links</option>
-                <option value="no_download" ' . selected($selected, 'no_download', false) . '>No Download Links</option>
+                <option value="">' . __('All Products', 'woo-download-manager') . '</option>
+                <option value="has_download" ' . selected($selected, 'has_download', false) . '>' . __('Has Download Links', 'woo-download-manager') . '</option>
+                <option value="no_download" ' . selected($selected, 'no_download', false) . '>' . __('No Download Links', 'woo-download-manager') . '</option>
               </select>';
     }
 });

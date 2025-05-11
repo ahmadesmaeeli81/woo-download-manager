@@ -6,3 +6,7 @@ add_action('admin_enqueue_scripts', function ($hook) {
         wp_enqueue_style('download-links-style', plugin_dir_url(__FILE__) . '../assets/css/admin-style.css');
     }
 });
+
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('wdla-admin-styles', plugins_url('/assets/css/admin.css', dirname(__FILE__)));
+});
