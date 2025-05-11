@@ -3,7 +3,7 @@ Contributors: ahmadesmaeeli
 Tags: woocommerce, download, admin, links, management
 Requires at least: 5.0
 Tested up to: 6.4
-Stable tag: 1.0.7
+Stable tag: 1.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,10 @@ Yes, this plugin is regularly tested with the latest version of WooCommerce.
 3. Filter dropdown for download status
 
 == Changelog ==
+
+= 1.1 =
+* Added Persian (Farsi) language support
+* Added translation files for Persian language
 
 = 1.0.7 =
 * Added responsive design support for all screen sizes

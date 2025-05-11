@@ -30,8 +30,10 @@ add_action('manage_product_posts_custom_column', function ($column, $post_id) {
                 echo '<div class="download-link-item">';
                 echo '<span class="file-name" title="' . esc_attr($file_name) . '">' . $file_name . '</span>';
                 echo '<input type="text" class="download-link" value="' . $download_url . '" readonly />';
+                echo '<div class="buttons-container">';
                 echo '<button class="copy-download-link button" title="' . esc_attr__('Copy download link', 'woo-download-manager') . '">' . __('Copy', 'woo-download-manager') . '</button>';
                 echo '<a href="' . $download_url . '" class="button view-link" target="_blank" title="' . esc_attr__('Open in new tab', 'woo-download-manager') . '">' . __('View', 'woo-download-manager') . '</a>';
+                echo '</div>';
                 echo '</div>';
             }
             echo '</div>';

@@ -1,44 +1,64 @@
 .download-links-container {
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
 .download-link-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 8px;
     margin-bottom: 8px;
-    padding: 8px;
-    background: #f8f9fa;
-    border-radius: 4px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
 }
 
 .download-link-item .file-name {
-    flex: 1;
     font-weight: 500;
+    color: #1f2937;
+    font-size: 13px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .download-link-item .download-link {
-    flex: 2;
-    padding: 4px 8px;
-    border: 1px solid #ddd;
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #e5e7eb;
     border-radius: 4px;
-    background: #fff;
+    background: #f9fafb;
     font-family: monospace;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.download-link-item .buttons-container {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
 }
 
 .download-link-item .copy-download-link,
 .download-link-item .view-link {
-    padding: 4px 8px;
-    min-width: 60px;
+    flex: 1;
+    padding: 6px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    background: #fff;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.15s ease;
     text-align: center;
 }
 
 .download-link-item .copy-download-link:hover,
 .download-link-item .view-link:hover {
-    background: #f0f0f0;
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #1f2937;
 }
 
 /* Tooltip styles */
@@ -50,18 +70,15 @@
 /* Responsive styles */
 @media screen and (max-width: 782px) {
     .download-link-item {
-        flex-direction: column;
-        align-items: stretch;
+        padding: 10px;
     }
     
-    .download-link-item .file-name,
-    .download-link-item .download-link {
-        width: 100%;
+    .download-link-item .buttons-container {
+        flex-direction: column;
     }
     
     .download-link-item .copy-download-link,
     .download-link-item .view-link {
         width: 100%;
-        margin-top: 4px;
     }
 } 

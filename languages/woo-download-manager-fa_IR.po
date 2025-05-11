@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooDownload Manager\n"
+"POT-Creation-Date: 2024-03-19 12:00+0330\n"
+"PO-Revision-Date: 2025-05-12 02:43+0330\n"
+"Last-Translator: Ahmad Esmaeeli\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: languages\n"
+
+msgid "Download Links"
+msgstr "لینک‌های دانلود"
+
+msgid "Copy"
+msgstr "کپی"
+
+msgid "View"
+msgstr "مشاهده"
+
+msgid "Copy download link"
+msgstr "کپی لینک دانلود"
+
+msgid "Open in new tab"
+msgstr "باز کردن در تب جدید"
+
+msgid "No Download Links"
+msgstr "بدون لینک دانلود"
+
+msgid "All Products"
+msgstr "همه محصولات"
+
+msgid "Has Download Links"
+msgstr "دارای لینک دانلود"
+
+msgid "Link copied to clipboard!"
+msgstr "لینک در کلیپ‌بورد کپی شد!"
+
+msgid "Failed to copy link"
+msgstr "خطا در کپی کردن لینک"
+
+msgid "WooDownload Manager requires WooCommerce to be installed and active."
+msgstr "افزونه مدیریت دانلود ووکامرس نیاز به نصب و فعال بودن ووکامرس دارد."

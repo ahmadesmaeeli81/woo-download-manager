@@ -11,6 +11,7 @@ A WooCommerce plugin that enhances the admin product list by adding a new column
 - Enhanced security features
 - Improved UI/UX with loading states
 - Better error handling
+- Persian (Farsi) language support
 
 ## 🛠️ Installation
 1. Upload the plugin folder to `wp-content/plugins/` using FTP or the WordPress dashboard.
@@ -22,6 +23,10 @@ A WooCommerce plugin that enhances the admin product list by adding a new column
 - Use the **No Download Links** filter to quickly find products missing download links.
 
 ## 📝 Changelog
+### Version 1.1
+- Added Persian (Farsi) language support
+- Added translation files for Persian language
+
 ### Version 1.0.7
 - Added responsive design support for all screen sizes
 - Improved copy functionality with better error handling
